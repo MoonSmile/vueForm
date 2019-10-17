@@ -3,6 +3,9 @@ module.exports = {
     ['@vue/app', {
         useBuiltIns: 'entry'
     }],
-     ['@vue/babel-preset-jsx']
+    //不用配置可以直接用，配置后报重复声明错误
+    //  ['@vue/babel-preset-jsx']
  ]
+
+
 }
