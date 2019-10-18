@@ -33,6 +33,6 @@ export default {
 <style scoped>
 .Container {
   width: 40%;
-  background: gainsboro;
+  background: #E8E8E8;
 }
 </style>

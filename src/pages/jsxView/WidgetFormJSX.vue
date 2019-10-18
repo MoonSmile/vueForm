@@ -1,6 +1,12 @@
 <template>
   <div class="main-form">
-    <wrap v-for="(def,index) in formDef" :key="index" :def="def"></wrap>
+    <el-form >
+      <draggable class="mainland" v-model="formDef" v-bind="{group:'cplist', ghostClass: 'ghost'}" @change="log">
+        <el-form-item class="item" v-for="(def,index) in formDef" :label="def.type"  :key="index">
+          <wrap :def="def"></wrap>
+        </el-form-item>
+      </draggable>
+    </el-form>
     <!-- <render-dom :render-func="renderFunc" :number="number"></render-dom> -->
   </div>
 </template>
@@ -8,32 +14,36 @@
 <script>
 // import RenderDom from "./render-dom";
 import wrap from "./widgets/widgetWrap";
-
+import Draggable from "vuedraggable";
 export default {
   name: "widgetFormJSX",
   components: {
-    wrap
+    wrap,
+    Draggable
     // RenderDom
   },
   data() {
     return {
-      formDef:[
-          {
-            type:"input",
-            value:"666",
-            callback:this.myCallBack
-          }
-        ]
+      formDef: [
+        {
+          type: "input",
+          value: "666",
+          callback: this.myCallBack
+        }
+      ]
     };
   },
   mounted() {},
   methods: {
+    log: function(evt) {
+      window.console.log(evt);
+    },
     handleClick() {
       console.log("click");
     },
-    myCallBack(def,newVal) {
-      def.value = newVal
-    },
+    myCallBack(def, newVal) {
+      def.value = newVal;
+    }
     // renderFunc(h, num) {
     //   return <div on-click={this.handleClick}>{num}Hello Vue</div>;
     // }
@@ -46,5 +56,14 @@ export default {
   border-width: 1px;
   border-style: dotted solid double dashed;
   border-color: #123456;
+}
+.mainland{
+    height: 100%;
+    background: #F8F8F8;
+    padding-bottom: 150px;
+}
+.item{
+  padding: 1em;
+  border: 1px solid #123456;
 }
 </style>
