@@ -13,10 +13,12 @@
 
 <script>
 // import RenderDom from "./render-dom";
+import { formDef } from './mixins/formDef'
 import wrap from "./widgets/widgetWrap";
 import Draggable from "vuedraggable";
 export default {
   name: "widgetFormJSX",
+  mixins: [formDef],
   components: {
     wrap,
     Draggable
@@ -24,24 +26,20 @@ export default {
   },
   data() {
     return {
-      formDef: [
-        {
-          type: "input",
-          value: "666",
-          callback: this.myCallBack
-        }
-      ]
     };
   },
-  mounted() {},
+  mounted() {
+    this.formDefAddDefaultCallback(this.myCallBack)
+  },
   methods: {
     log: function(evt) {
-      window.console.log(evt);
+      evt.added.element.callback = this.myCallBack
     },
     handleClick() {
       console.log("click");
     },
     myCallBack(def, newVal) {
+      console.log(newVal)
       def.value = newVal;
     }
     // renderFunc(h, num) {
