@@ -1,14 +1,12 @@
-import inputJSX from "./inputJSX"
-import textareaJSX from "./textareaJSX"
+import widgetLoader from "./widgetLoader"
 export default {
     name: "widgetWrap",
+    components:{
+        widgetLoader
+    },
     props: ["def"],
     data() {
         return {
-            template: {
-                "input": inputJSX,
-                "textarea":textareaJSX
-            }
         }
     },
     methods: {
@@ -18,7 +16,7 @@ export default {
             <div style="margin:1em;">
                 {/* <p>wrap value:{this.def.value}</p> */}
                 {
-                    h(this.template[this.def.type], {
+                    h(widgetLoader[this.def.type], {
                         props: {
                             def: this.def,
                         },

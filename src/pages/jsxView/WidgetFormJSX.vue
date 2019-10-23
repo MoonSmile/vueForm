@@ -7,12 +7,10 @@
         </el-form-item>
       </draggable>
     </el-form>
-    <!-- <render-dom :render-func="renderFunc" :number="number"></render-dom> -->
   </div>
 </template>
 
 <script>
-// import RenderDom from "./render-dom";
 import { formDef } from './mixins/formDef'
 import wrap from "./widgets/widgetWrap";
 import Draggable from "vuedraggable";
@@ -22,7 +20,6 @@ export default {
   components: {
     wrap,
     Draggable
-    // RenderDom
   },
   data() {
     return {
@@ -42,9 +39,6 @@ export default {
       console.log(newVal)
       def.value = newVal;
     }
-    // renderFunc(h, num) {
-    //   return <div on-click={this.handleClick}>{num}Hello Vue</div>;
-    // }
   }
 };
 </script>
