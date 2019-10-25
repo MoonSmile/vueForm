@@ -29,9 +29,10 @@ export default {
   mounted() {
   },
   methods: {
-    cloneTemplate({type}){
+    cloneTemplate({type,options}){
       return{
         type:type,
+        options:options,
         value:Math.round(Math.random()*100)
       }
     },

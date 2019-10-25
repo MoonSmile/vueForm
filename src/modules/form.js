@@ -1,10 +1,7 @@
 const common = require('@/../utils/common');
 
 const state = {
-    def: [{
-        type: "input",
-        value: "666",
-    }]
+    def: []
 }
 
 const getters = {
@@ -24,6 +21,9 @@ const mutations = {
     },
     updateFormDef(state, def) {
         state.def = def
+    },
+    clearFormDef(state){
+        state.def = []
     }
 }
 

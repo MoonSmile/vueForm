@@ -12,7 +12,7 @@ export default {
     },
     render() {
         return (
-            <el-input value={this.def.value} onInput={this.input}></el-input>
+            <el-input placeholder = {this.def.options.placeholder} value={this.def.value} onInput={this.input}></el-input>
         );
     }
 };
