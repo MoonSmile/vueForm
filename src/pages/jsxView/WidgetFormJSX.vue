@@ -30,10 +30,11 @@ export default {
   },
   methods: {
     log: function(evt) {
-      evt.added.element.callback = this.myCallBack
-    },
-    handleClick() {
-      console.log("click");
+      if(evt.added)
+      {
+        evt.added.element.callback = this.myCallBack
+      }
+      
     },
     myCallBack(def, newVal) {
       console.log(newVal)

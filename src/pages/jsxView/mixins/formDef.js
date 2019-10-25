@@ -21,7 +21,8 @@ export const formDef = {
     },
     methods: {
         ...mapMutations('form', {
-            formDefAddDefaultCallback: 'addDefaultCallback'
+            formDefAddDefaultCallback: 'addDefaultCallback',
+            clearFormDef: 'clearFormDef'
         }),
     }
 }
