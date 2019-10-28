@@ -4,7 +4,7 @@
     </el-header>
     <el-container>
       <el-aside width="200px">
-        <component-menu></component-menu>
+        <widget-menu></widget-menu>
       </el-aside>
       <el-container>
         <el-main>
@@ -23,14 +23,14 @@
 </template>
 <script>
 import { formDef } from "./mixins/formDef";
-import componentMenu from "./CompomentMenu";
+import WidgetMenu from "./WidgetMenu";
 import widgetFormJSX from "./WidgetFormJSX";
 import config from "./Config";
 export default {
   name: "Container",
   mixins: [formDef],
   components: {
-    componentMenu,
+    WidgetMenu,
     "main-form": widgetFormJSX,
     config
   },

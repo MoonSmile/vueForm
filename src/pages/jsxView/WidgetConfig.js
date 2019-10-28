@@ -1,4 +1,4 @@
-export const basicComponents = [
+export const basicWidgetDef = [
   {
     type: "input",
     name: "单行文本",
