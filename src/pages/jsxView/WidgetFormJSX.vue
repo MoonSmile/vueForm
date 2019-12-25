@@ -2,7 +2,7 @@
   <div class="main-form">
     
       <draggable class="mainland" v-model="formDef" v-bind="{group:'cplist', ghostClass: 'ghost'}" @change="log">
-        <div class="item" v-for="(def,index) in formDef" :label="def.type"  :key="index">
+        <div class="item" v-for="(def,index) in formDef" :label="def.type"  :key="index" @click.stop="changeSelect(def)">
           <wrap :def="def"></wrap>
         </div>
       </draggable>
@@ -29,6 +29,9 @@ export default {
     this.formDefAddDefaultCallback(this.myCallBack)
   },
   methods: {
+    changeSelect(def){
+      this.$store.commit('form/setSelect',def)
+    },
     log: function(evt) {
       if(evt.added)
       {

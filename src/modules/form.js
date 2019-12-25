@@ -1,12 +1,17 @@
 const common = require('@/../utils/common');
 
 const state = {
-    def: []
+    def: [],
+    itemdef:{}
 }
 
 const getters = {
     getFormDef(state) {
         return common.deepCopy(state.def)
+    },
+    getWidgetItemDef(state) {
+ 
+        return state.itemdef
     }
 }
 
@@ -24,6 +29,10 @@ const mutations = {
     },
     clearFormDef(state){
         state.def = []
+    },
+    setSelect(state,itemdef)
+    {
+        state.itemdef = itemdef
     }
 }
 
