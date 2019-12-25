@@ -13,9 +13,20 @@ export const formDef = {
                 this.$store.commit('form/updateFormDef', newValue)
             }
         },
+        bo: {
+            // getter
+            get: function () {
+                return this.boData
+            },
+            // setter
+            set: function (newValue) {
+                this.$store.commit('bo/setBoData', newValue)
+            }
+        },
 
         ...mapState({
-            def: state => state.form.def
+            def: state => state.form.def,
+            boData:state =>state.bo.data
         })
 
     },

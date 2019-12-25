@@ -1,12 +1,12 @@
 <template>
   <div class="main-form">
-    <el-form >
+    
       <draggable class="mainland" v-model="formDef" v-bind="{group:'cplist', ghostClass: 'ghost'}" @change="log">
-        <el-form-item class="item" v-for="(def,index) in formDef" :label="def.type"  :key="index">
+        <div class="item" v-for="(def,index) in formDef" :label="def.type"  :key="index">
           <wrap :def="def"></wrap>
-        </el-form-item>
+        </div>
       </draggable>
-    </el-form>
+  
   </div>
 </template>
 
@@ -56,7 +56,7 @@ export default {
     padding-bottom: 150px;
 }
 .item{
-  padding: 1em;
+
   border: 1px solid #123456;
 }
 </style>

@@ -15,7 +15,7 @@
         </el-main>
         <el-footer>Footer</el-footer>
       </el-container>
-       <el-aside width="200px">
+      <el-aside width="200px">
         <config></config>
       </el-aside>
     </el-container>
@@ -35,12 +35,24 @@ export default {
     config
   },
   data() {
-    return {};
+    return {
+    };
   },
-  mounted() {},
+  mounted() {
+    this.getBoData();
+  },
   methods: {
     clearForm() {
       this.clearFormDef();
+    },
+    getBoData() {
+      let that = this
+      this.$axios.get("/mock/bo.json").then(res => {
+        if(res.status == 200)
+        {
+          that.bo = res.data
+        }
+      });
     }
   }
 };
