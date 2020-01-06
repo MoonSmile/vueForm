@@ -18,6 +18,7 @@
 
 <script>
 import Draggable from "vuedraggable";
+import uuidv1 from 'uuid/v1' 
 export default {
   components: {
     Draggable
@@ -31,6 +32,7 @@ export default {
   methods: {
     cloneTemplate({type,options}){
       return{
+        id:uuidv1(),
         type:type,
         options:options,
         value:Math.round(Math.random()*100)
