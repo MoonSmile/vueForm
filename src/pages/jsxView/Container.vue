@@ -15,7 +15,7 @@
         </el-main>
         <el-footer>Footer</el-footer>
       </el-container>
-      <el-aside width="200px">
+      <el-aside width="300px">
         <config></config>
       </el-aside>
     </el-container>

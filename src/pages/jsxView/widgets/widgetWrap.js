@@ -12,7 +12,7 @@ export default {
     },
     methods: {
         handleClick(e) {
-            console.log(e, this.def)
+            return e
         }
     },
     watch: {

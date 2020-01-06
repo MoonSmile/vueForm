@@ -13,7 +13,7 @@ export default {
     },
     render() {
         return (
-            <el-input type="textarea" value={this.def.value} onInput={this.input}></el-input>
+            <el-input type="textarea" value={this.def.options.defaultValue} onInput={this.input}></el-input>
         );
     }
 };

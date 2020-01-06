@@ -34,8 +34,7 @@ export default {
       return{
         id:uuidv1(),
         type:type,
-        options:options,
-        value:Math.round(Math.random()*100)
+        options:JSON.parse(JSON.stringify(options))
       }
     },
     handleMoveStart({ oldIndex }) {
