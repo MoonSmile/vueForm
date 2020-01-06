@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './jsxView.vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import '@/style/common.scss'
 import store from '@/modules/store'
 import router from "./router"
 Vue.use(ElementUI)

@@ -39,10 +39,10 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
 .grid-content {
   text-align: center;
-  border: 1px dotted #333333;
+  border: 2px dotted $grid-color;
   min-height: 100px;
 }
 </style>

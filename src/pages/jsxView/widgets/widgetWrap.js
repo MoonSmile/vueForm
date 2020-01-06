@@ -11,12 +11,12 @@ export default {
     },
     methods: {
         handleClick(e){
-            console.log(e)
+            console.log(e,this.def)
         }
     },
     render(h) {
         return (
-            <div style="margin:1em;border:1px solid #cc2323" onClick={(e) => {this.handleClick(e)}}>
+            <div class="widget-wrap" onClick={(e) => {this.handleClick(e)}}>
                 {/* <p>wrap value:{this.def.value}</p> */}
                 {
                     h(widgetLoader[this.def.type], {
