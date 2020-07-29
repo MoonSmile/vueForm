@@ -22,10 +22,10 @@
   </div>
 </template>
 <script>
-import { formDef } from "./mixins/formDef";
-import WidgetMenu from "./WidgetMenu";
-import widgetFormJSX from "./WidgetFormJSX";
-import config from "./Config";
+import { formDef } from "@/pages/jsxView/mixins/formDef";
+import WidgetMenu from "./components/WidgetMenu";
+import widgetFormJSX from "./components/WidgetFormJSX";
+import config from "./components/Config";
 export default {
   name: "Container",
   mixins: [formDef],
@@ -59,7 +59,6 @@ export default {
 </script>
 <style scoped>
 .Container {
-  width: 60%;
   background: #f7f4f4;
 }
 .stay-right {

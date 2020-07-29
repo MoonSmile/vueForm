@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import simpleRender from "./views/simpleRender";
+import simpleRender from "./simpleRender";
 import WidgetFormConfig from "./WidgetFormConfig";
 export default {
   name: "config",

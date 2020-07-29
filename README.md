@@ -14,8 +14,13 @@ mock
 npm install axios --save 
 
 sass-loader 
-npm install sass-loader -D
+npm install sass-loader@8 -D
 npm install node-sass --save-dev
+要限制版本号，如果安装高版本，如当前默认安装为9.0.2 版本，会报错
+options has an unknown property 'prependData'. 
+These properties are valid:...
+解决方法修改版本号 9.0.2 => 8.0.2，重新安装依赖
+
 ## 难点
 1 如果组件属性配置使用component v-bind:is 的方式进行加载，在组件属性以扁平化的格式存储的情况下，无法对关联属性进行加载（例：是否设置最大值+最大值）
 

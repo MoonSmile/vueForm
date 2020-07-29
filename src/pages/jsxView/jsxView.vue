@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Container from "./Container"
+import Container from "./layout/Container"
 export default {
   name: "index",
   components:{

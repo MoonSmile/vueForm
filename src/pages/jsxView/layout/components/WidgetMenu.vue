@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import { basicWidgetDef } from "./WidgetConfig";
+import { basicWidgetDef } from "@/pages/jsxView/WidgetConfig";
 import widgetList from "./WidgetList";
-import boTree from "./views/BoTree";
+import boTree from "./BoTree";
 export default {
   name: "left-menu",
   components: {

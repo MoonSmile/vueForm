@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { formDef } from "../mixins/formDef";
+import { formDef } from "@/pages/jsxView/mixins/formDef";
 export default {
   name: "boTree",
   mixins: [formDef],

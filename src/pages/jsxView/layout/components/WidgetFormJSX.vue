@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import { formDef } from './mixins/formDef'
-import wrap from "./widgets/widgetWrap";
+import { formDef } from '@/pages/jsxView/mixins/formDef'
+import wrap from "@/pages/jsxView/widgets/widgetWrap";
 import Draggable from "vuedraggable";
 export default {
   name: "widgetFormJSX",
