@@ -29,6 +29,9 @@ const mutations = {
     },
     clearFormDef(state){
         state.def = []
+        state.itemdef = {
+            options:{}
+        }
     },
     setSelect(state,itemdef)
     {

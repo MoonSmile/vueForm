@@ -26,7 +26,7 @@ export const formDef = {
 
         ...mapState({
             def: state => state.form.def,
-            boData:state =>state.bo.data
+            boData:state =>state.bo ? state.bo.data : {}
         })
 
     },

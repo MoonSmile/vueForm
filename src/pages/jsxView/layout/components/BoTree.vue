@@ -60,6 +60,7 @@ export default {
   },
   watch: {
       boData:function(val){
+        if(val)
           this.initBOView(val)
       }
   }
